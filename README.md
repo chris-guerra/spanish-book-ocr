@@ -67,16 +67,47 @@ spanish-book-ocr/
    - `/download/{language}` - Download language model
 
 ## Implementation Steps
-1. Set up project structure and dependencies
-2. Implement PDF processing utilities
-3. Create OCR core functionality
-4. Develop FastAPI endpoints
-5. Build Streamlit interface
-6. Create Docker configuration
-7. Add language model management
-8. Implement error handling and logging
-9. Add tests
-10. Create documentation
+1. ✅ Set up project structure and dependencies
+2. ⏳ Implement PDF processing utilities
+3. ⏳ Create OCR core functionality
+4. ⏳ Develop FastAPI endpoints
+5. ⏳ Build Streamlit interface
+6. ✅ Create Docker configuration
+7. ⏳ Add language model management
+8. ⏳ Implement error handling and logging
+9. ⏳ Add tests
+10. ⏳ Create documentation
+
+## Configuration
+The application uses environment variables for configuration. Key settings include:
+
+```env
+API_HOST=0.0.0.0
+API_PORT=8000
+STREAMLIT_SERVER_PORT=8501
+```
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/spanish-book-ocr.git
+cd spanish-book-ocr
+```
+
+2. Create a `.env` file with the required configuration:
+```bash
+cp .env.example .env
+```
+
+3. Build and run with Docker:
+```bash
+docker-compose up --build
+```
+
+4. Access the applications:
+   - Streamlit UI: http://localhost:8501
+   - API Documentation: http://localhost:8000/docs
 
 ## Important Notes
 - Tesseract language data files are automatically fetched from: https://github.com/tesseract-ocr/tessdata/tree/main
@@ -84,9 +115,6 @@ spanish-book-ocr/
   ```bash
   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
   ```
-
-## Getting Started
-[To be added]
 
 ## Contributing
 [To be added]

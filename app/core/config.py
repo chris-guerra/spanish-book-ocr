@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     # API settings
     API_V1_STR: str = "/api/v1"
     PROJECT_NAME: str = "Spanish Book OCR"
+    API_HOST: str = "0.0.0.0"
+    API_PORT: int = 8000
+    STREAMLIT_SERVER_PORT: int = 8501
 
     class Config:
         case_sensitive = True

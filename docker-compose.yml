@@ -1,0 +1,16 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"  # FastAPI
+      - "8501:8501"  # Streamlit
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - STREAMLIT_SERVER_PORT=8501
+      - TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
+    restart: unless-stopped 
